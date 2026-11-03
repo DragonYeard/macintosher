@@ -19,12 +19,13 @@
   table.list td { font-size: 12px; padding: 8px; border-bottom: 1px solid #bbbbbb; vertical-align: top; }
   
   .col-download { width: 100px; text-align: right; }
-  .col-format { text-transform: uppercase; font-family: Monaco, Courier, monospace; font-size: 11px; white-space: nowrap; }
   .col-date { white-space: nowrap; }
   
   .btn-download { font-family: Geneva, Helvetica, sans-serif; font-size: 11px; background-color: #eeeeee; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 3px 10px; cursor: pointer; color: #000000; text-decoration: none; display: inline-block; }
   .btn-download:hover { background-color: #ffffff; }
   .btn-download:active { border-top: 1px solid #777777; border-left: 1px solid #777777; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff; }
+  
+  .hash { font-family: Monaco, Courier, monospace; font-size: 10px; color: #666; display: block; margin-top: 2px; }
   
   .legend { font-size: 11px; color: #444444; margin-top: 20px; line-height: 1.4; }
   .footer { margin-top: 24px; padding: 14px 0 26px 0; text-align: center; }
@@ -32,9 +33,8 @@
 
   @media (max-width: 600px) {
     .col-date, th.col-date { display: none; }
-    .col-version { width: 50%; }
-    .col-format { width: 30%; }
-    .col-download { width: 20%; text-align: right; }
+    .col-version { width: 70%; }
+    .col-download { width: 30%; text-align: right; }
     table.list td, table.list th { padding: 6px 4px; }
   }
 </style>
@@ -46,70 +46,456 @@
   <div class="nav"><a href="index.html">Home</a> &nbsp;|&nbsp; <a href="system.html">System</a></div>
   <hr>
 
-  <div class="group">Pre-release Prototype ROMs (1983)</div>
+  <!-- ПРОТОТИПЫ -->
+  <div class="group">Pre-release Prototypes (1983)</div>
   <table class="list">
+    <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
     <tr>
-      <th class="col-version">Model</th>
-      <th class="col-date">Date</th>
-      <th class="col-format">Format</th>
-      <th class="col-download">Download</th>
-    </tr>
-    
-    <tr>
-      <td class="col-version">
-        <b>Twiggy Mac ROM</b><br>
-        <span style="font-size:10px;color:#555;">Full ROM image, ready to use</span>
-      </td>
+      <td class="col-version"><b>Twiggy Mac ROM</b></td>
       <td class="col-date">1983</td>
-      <td class="col-format">.ROM</td>
-      <td class="col-download">
-        <a href="files/rom/Twiggy.ROM" class="btn-download" download>Download</a>
-      </td>
+      <td class="col-download"><a href="files/rom/Twiggy.ROM" class="btn-download" download>Download</a></td>
     </tr>
-    
     <tr>
-      <td class="col-version">
-        <b>Mac 128K Prototype (Split BIN)</b><br>
-        <span style="font-size:10px;color:#555;">All 4 parts included in one ZIP</span>
-      </td>
+      <td class="col-version"><b>Mac 128K Prototype (Split BIN)</b></td>
       <td class="col-date">1983</td>
-      <td class="col-format">.ZIP</td>
-      <td class="col-download">
-        <a href="files/rom/Mac128K_Prototype_BIN.zip" class="btn-download" download>Download</a>
-      </td>
+      <td class="col-download"><a href="files/rom/Mac128K_Prototype_BIN.zip" class="btn-download" download>Download</a></td>
     </tr>
   </table>
 
-  <div class="group">Production ROMs (1984)</div>
+  <!-- 64K -->
+  <div class="group">64 KB ROMs</div>
   <table class="list">
+    <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
     <tr>
-      <th class="col-version">Model</th>
-      <th class="col-date">Date</th>
-      <th class="col-format">Format</th>
-      <th class="col-download">Download</th>
+      <td class="col-version"><b>Macintosh 128K</b><span class="hash">CRC32: 28BA61CE</span></td>
+      <td class="col-date">1984-01</td>
+      <td class="col-download"><a href="files/rom/Mac128.ROM" class="btn-download" download>Download</a></td>
     </tr>
-    
     <tr>
-      <td class="col-version">
-        <b>Macintosh 128K ROM</b><br>
-        <span style="font-size:10px;color:#555;">Standard production ROM</span>
-      </td>
-      <td class="col-date">1984</td>
-      <td class="col-format">.ROM</td>
-      <td class="col-download">
-        <a href="files/rom/Mac128k.rom" class="btn-download" download>Download</a>
-      </td>
+      <td class="col-version"><b>Macintosh 512K</b><span class="hash">CRC32: 28BA4E50</span></td>
+      <td class="col-date">1984-10</td>
+      <td class="col-download"><a href="files/rom/Mac512K.ROM" class="btn-download" download>Download</a></td>
     </tr>
   </table>
 
+  <!-- 128K -->
+  <div class="group">128 KB ROMs</div>
+  <table class="list">
+    <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
+    <tr>
+      <td class="col-version"><b>Mac Plus v1</b><span class="hash">CRC32: 4D1EEEE1</span></td>
+      <td class="col-date">1986-01</td>
+      <td class="col-download"><a href="files/rom/MacPlus_v1.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac Plus v2</b><span class="hash">CRC32: 4D1EEAE1</span></td>
+      <td class="col-date">1986-03</td>
+      <td class="col-download"><a href="files/rom/MacPlus_v2.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac Plus v3</b><span class="hash">CRC32: 4D1F8172</span></td>
+      <td class="col-date">1986-03</td>
+      <td class="col-download"><a href="files/rom/MacPlus_v3.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+  </table>
+
+  <!-- 256K -->
+  <div class="group">256 KB ROMs</div>
+  <table class="list">
+    <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
+    <tr>
+      <td class="col-version"><b>Mac II (800k v1)</b><span class="hash">CRC32: 97851DB6</span></td>
+      <td class="col-date">1987-03</td>
+      <td class="col-download"><a href="files/rom/MacII_v1.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac SE</b><span class="hash">CRC32: B2E362A8</span></td>
+      <td class="col-date">1987-03</td>
+      <td class="col-download"><a href="files/rom/MacSE.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac II (800k v2)</b><span class="hash">CRC32: 9779D2C4</span></td>
+      <td class="col-date">1987-12</td>
+      <td class="col-download"><a href="files/rom/MacII_v2.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac II FDHD & IIx & IIcx</b><span class="hash">CRC32: 97221136</span></td>
+      <td class="col-date">1988-09</td>
+      <td class="col-download"><a href="files/rom/MacII_FDHD.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac Portable</b><span class="hash">CRC32: 96CA3846</span></td>
+      <td class="col-date">1989-02</td>
+      <td class="col-download"><a href="files/rom/MacPortable.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac SE FDHD</b><span class="hash">CRC32: B306E171</span></td>
+      <td class="col-date">1989-08</td>
+      <td class="col-download"><a href="files/rom/MacSE_FDHD.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>PowerBook 100</b><span class="hash">CRC32: 96645F9C</span></td>
+      <td class="col-date">1991-10</td>
+      <td class="col-download"><a href="files/rom/PowerBook100.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+  </table>
+
+  <!-- 512K -->
+  <div class="group">512 KB ROMs</div>
+  <table class="list">
+    <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
+    <tr>
+      <td class="col-version"><b>Mac IIci</b><span class="hash">CRC32: 368CADFE</span></td>
+      <td class="col-date">1989-09</td>
+      <td class="col-download"><a href="files/rom/MacIIci.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac IIfx</b><span class="hash">CRC32: 4147DD77</span></td>
+      <td class="col-date">1990-03</td>
+      <td class="col-download"><a href="files/rom/MacIIfx.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac LC</b><span class="hash">CRC32: 350EACF0</span></td>
+      <td class="col-date">1990-10</td>
+      <td class="col-download"><a href="files/rom/MacLC.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac IIsi</b><span class="hash">CRC32: 36B7FB6C</span></td>
+      <td class="col-date">1990-10</td>
+      <td class="col-download"><a href="files/rom/MacIIsi.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac Classic</b><span class="hash">CRC32: A49F9914</span></td>
+      <td class="col-date">1990-10</td>
+      <td class="col-download"><a href="files/rom/MacClassic.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Classic II</b><span class="hash">CRC32: 3193670E</span></td>
+      <td class="col-date">1991-10</td>
+      <td class="col-download"><a href="files/rom/ClassicII.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac LC II</b><span class="hash">CRC32: 35C28F5F</span></td>
+      <td class="col-date">1992-03</td>
+      <td class="col-download"><a href="files/rom/MacLCII.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+  </table>
+
+  <!-- 1MB -->
+  <div class="group">1 MB ROMs</div>
+  <table class="list">
+    <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
+    <tr>
+      <td class="col-version"><b>Quadra 700 & 900 & PB140 & 170</b><span class="hash">CRC32: 420DBFF3</span></td>
+      <td class="col-date">1991-10</td>
+      <td class="col-download"><a href="files/rom/Quadra700.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Quadra 950</b><span class="hash">CRC32: 3DC27823</span></td>
+      <td class="col-date">1992-03</td>
+      <td class="col-download"><a href="files/rom/Quadra950.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac IIvx & IIvi or Performa 600</b><span class="hash">CRC32: 4957EB49</span></td>
+      <td class="col-date">1992-10</td>
+      <td class="col-download"><a href="files/rom/MacIIvx.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Powerbook 160/165/165c/180/180c</b><span class="hash">CRC32: E33B2724</span></td>
+      <td class="col-date">1992-10</td>
+      <td class="col-download"><a href="files/rom/Powerbook160.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Powerbook 210/230/250</b><span class="hash">CRC32: ECFA989B</span></td>
+      <td class="col-date">1992-10</td>
+      <td class="col-download"><a href="files/rom/Powerbook210.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac LC III (older)</b><span class="hash">CRC32: EC904829</span></td>
+      <td class="col-date">1993-02</td>
+      <td class="col-download"><a href="files/rom/MacLCIII_old.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac LC III</b><span class="hash">CRC32: ECBBC41C</span></td>
+      <td class="col-date">1993-02</td>
+      <td class="col-download"><a href="files/rom/MacLCIII.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Color Classic</b><span class="hash">CRC32: ECD99DC0</span></td>
+      <td class="col-date">1993-02</td>
+      <td class="col-download"><a href="files/rom/ColorClassic.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Quadra / Centris 610, 650</b><span class="hash">CRC32: F1A6F343</span></td>
+      <td class="col-date">1993-02</td>
+      <td class="col-download"><a href="files/rom/Quadra610.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Quadra / Centris 610, 650, 800</b><span class="hash">CRC32: F1ACAD13</span></td>
+      <td class="col-date">1993-02</td>
+      <td class="col-download"><a href="files/rom/Quadra800.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Powerbook Duo 270C</b><span class="hash">CRC32: 0024D346</span></td>
+      <td class="col-date">1993-10</td>
+      <td class="col-download"><a href="files/rom/PowerbookDuo270C.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Color Classic II & LC 550 & Performa 275/550/560 & Mac TV</b><span class="hash">CRC32: EDE66CBD</span></td>
+      <td class="col-date">1993-10</td>
+      <td class="col-download"><a href="files/rom/ColorClassicII.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>LC475/575, Quadra 605, Performa 475/476/575/577/578</b><span class="hash">CRC32: FF7439EE</span></td>
+      <td class="col-date">1993-10</td>
+      <td class="col-download"><a href="files/rom/LC475.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Powerbook Duo 280 & 280c</b><span class="hash">CRC32: 015621D7</span></td>
+      <td class="col-date">1994-04</td>
+      <td class="col-download"><a href="files/rom/PowerbookDuo280.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>LC/Quadra/Performa 630</b><span class="hash">CRC32: 06684214</span></td>
+      <td class="col-date">1994-07</td>
+      <td class="col-download"><a href="files/rom/LC630.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Powerbook 150</b><span class="hash">CRC32: FDA22562</span></td>
+      <td class="col-date">1994-07</td>
+      <td class="col-download"><a href="files/rom/Powerbook150.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>LC/Performa 580 & 588</b><span class="hash">CRC32: 064DC91D</span></td>
+      <td class="col-date">1995-04</td>
+      <td class="col-download"><a href="files/rom/LC580.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+  </table>
+
+  <!-- 2MB -->
+  <div class="group">2 MB ROMs</div>
+  <table class="list">
+    <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
+    <tr>
+      <td class="col-version"><b>PowerBook 520/520c/540/540c</b><span class="hash">CRC32: B6909089</span></td>
+      <td class="col-date">1994-05</td>
+      <td class="col-download"><a href="files/rom/PowerBook520.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Quadra 660av & 840av</b><span class="hash">CRC32: 5BF10FD1</span></td>
+      <td class="col-date">1994-09</td>
+      <td class="col-download"><a href="files/rom/Quadra660av.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Powerbook 190 & 190cs</b><span class="hash">CRC32: 4D27039C</span></td>
+      <td class="col-date">1995-08</td>
+      <td class="col-download"><a href="files/rom/Powerbook190.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+  </table>
+
+  <!-- 4MB -->
+  <div class="group">4 MB ROMs</div>
+  <table class="list">
+    <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
+    <tr>
+      <td class="col-version"><b>Power Mac 6100/7100/8100</b><span class="hash">CRC32: 9FEB69B3</span></td>
+      <td class="col-date">1994-03</td>
+      <td class="col-download"><a href="files/rom/PowerMac6100.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Workgroup Server 9150 80MHz</b><span class="hash">CRC32: 9C7C98F7</span></td>
+      <td class="col-date">1994-04</td>
+      <td class="col-download"><a href="files/rom/WGS9150_80.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac 7100 (newer)</b><span class="hash">CRC32: 9B7A3AAD</span></td>
+      <td class="col-date">1995-01</td>
+      <td class="col-download"><a href="files/rom/PowerMac7100_new.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac & Performa 5200/5300/6200/6300</b><span class="hash">CRC32: 63ABFD3F</span></td>
+      <td class="col-date">1995-04</td>
+      <td class="col-download"><a href="files/rom/PowerMac5200.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Workgroup Server 9150 120MHz</b><span class="hash">CRC32: 9B037F6F</span></td>
+      <td class="col-date">1995-04</td>
+      <td class="col-download"><a href="files/rom/WGS9150_120.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Powerbook 2300 & PB5x0 PPC Upgrade</b><span class="hash">CRC32: 83C54F75</span></td>
+      <td class="col-date">1995-08</td>
+      <td class="col-download"><a href="files/rom/Powerbook2300.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac 7200/7500/8500/9500 v2</b><span class="hash">CRC32: 9630C68B</span></td>
+      <td class="col-date">1995-08</td>
+      <td class="col-download"><a href="files/rom/PowerMac7200_v2.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac 7200/7500/8500/9500 v1</b><span class="hash">CRC32: 96CD923D</span></td>
+      <td class="col-date">1995-08</td>
+      <td class="col-download"><a href="files/rom/PowerMac7200_v1.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>PowerMac / Performa 6400</b><span class="hash">CRC32: 6F5724C0</span></td>
+      <td class="col-date">1996-08</td>
+      <td class="col-download"><a href="files/rom/PowerMac6400.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>PowerBook 1400, 1400cs</b><span class="hash">CRC32: 83A21950</span></td>
+      <td class="col-date">1996-10</td>
+      <td class="col-download"><a href="files/rom/PowerBook1400.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac 6500</b><span class="hash">CRC32: 6E92FE08</span></td>
+      <td class="col-date">1997-02</td>
+      <td class="col-download"><a href="files/rom/PowerMac6500.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac 7300/7600/8600/9600 (v1)</b><span class="hash">CRC32: 960E4BE9</span></td>
+      <td class="col-date">1997-02</td>
+      <td class="col-download"><a href="files/rom/PowerMac7300_v1.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac 8600 & 9600 (v2)</b><span class="hash">CRC32: 960FC647</span></td>
+      <td class="col-date">1997-02</td>
+      <td class="col-download"><a href="files/rom/PowerMac8600_v2.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac G3 (v3)</b><span class="hash">CRC32: 78F57389</span></td>
+      <td class="col-date">1997-11</td>
+      <td class="col-download"><a href="files/rom/PowerMacG3_v3.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Power Mac G3 desktop</b><span class="hash">CRC32: 79D68D63</span></td>
+      <td class="col-date">1997-11</td>
+      <td class="col-download"><a href="files/rom/PowerMacG3.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>PowerBook G3 Wallstreet</b><span class="hash">CRC32: CBB01212</span></td>
+      <td class="col-date">1998-03</td>
+      <td class="col-download"><a href="files/rom/PowerBookG3_Wallstreet.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>PowerBook G3 Wallstreet PDQ</b><span class="hash">CRC32: B46FFB63</span></td>
+      <td class="col-date">1998-08</td>
+      <td class="col-download"><a href="files/rom/PowerBookG3_PDQ.ROM" class="btn-download" download>Download</a></td>
+    </tr>
+  </table>
+
+  <!-- NEW WORLD ROMS -->
+  <div class="group">New World ROMs (1998-2003)</div>
+  <table class="list">
+    <tr><th class="col-version">ROM Version</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
+    
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 1.1</b></td>
+      <td class="col-date">Jul 1998</td>
+      <td class="col-download"><a href="files/rom/MacOS_1.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 1.1.2</b></td>
+      <td class="col-date">Aug 1998</td>
+      <td class="col-download"><a href="files/rom/MacOS_1.1.2.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 1.2</b></td>
+      <td class="col-date">Dec 1998</td>
+      <td class="col-download"><a href="files/rom/MacOS_1.2.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 1.2.1</b></td>
+      <td class="col-date">Jan 1999</td>
+      <td class="col-download"><a href="files/rom/MacOS_1.2.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 1.4</b></td>
+      <td class="col-date">Apr 1999</td>
+      <td class="col-download"><a href="files/rom/MacOS_1.4.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 1.6</b></td>
+      <td class="col-date">May 1999</td>
+      <td class="col-download"><a href="files/rom/MacOS_1.6.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 2.5.1</b></td>
+      <td class="col-date">Sep 1999</td>
+      <td class="col-download"><a href="files/rom/MacOS_2.5.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 3.0</b></td>
+      <td class="col-date">Sep 1999</td>
+      <td class="col-download"><a href="files/rom/MacOS_3.0.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 1.8.1</b></td>
+      <td class="col-date">Sep 1999</td>
+      <td class="col-download"><a href="files/rom/MacOS_1.8.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 3.7</b></td>
+      <td class="col-date">Mar 2000</td>
+      <td class="col-download"><a href="files/rom/MacOS_3.7.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 3.8</b></td>
+      <td class="col-date">May 2000</td>
+      <td class="col-download"><a href="files/rom/MacOS_3.8.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 6.1</b></td>
+      <td class="col-date">Nov 2000</td>
+      <td class="col-download"><a href="files/rom/MacOS_6.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 7.5.1</b></td>
+      <td class="col-date">Feb 2001</td>
+      <td class="col-download"><a href="files/rom/MacOS_7.5.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 8.4</b></td>
+      <td class="col-date">Jul 2001</td>
+      <td class="col-download"><a href="files/rom/MacOS_8.4.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 9.0.1</b></td>
+      <td class="col-date">Dec 2001</td>
+      <td class="col-download"><a href="files/rom/MacOS_9.0.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 9.1.1</b></td>
+      <td class="col-date">Apr 2002</td>
+      <td class="col-download"><a href="files/rom/MacOS_9.1.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 9.6.1</b></td>
+      <td class="col-date">Sep 2002</td>
+      <td class="col-download"><a href="files/rom/MacOS_9.6.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 9.8.1</b></td>
+      <td class="col-date">Jan 2003</td>
+      <td class="col-download"><a href="files/rom/MacOS_9.8.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac OS ROM 10.2.1</b></td>
+      <td class="col-date">Apr 2003</td>
+      <td class="col-download"><a href="files/rom/MacOS_10.2.1.rom" class="btn-download" download>Download</a></td>
+    </tr>
+  </table>
+
+  <!-- Легенда -->
   <p class="legend">
     <b>Format notes:</b><br>
-    <b>.ROM / .BIN</b> &mdash; Firmware dumps for Macintosh emulators (Mini vMac, Basilisk II, etc.). Not intended for writing to physical chips.
+    <b>.ROM / .BIN</b> - Firmware dumps for Macintosh emulators (Mini vMac, Basilisk II, QEMU, etc.).<br>
+    <b>CRC32</b> - Check the integrity of your downloaded ROM using this checksum.
   </p>
 
   <hr>
   <div class="footer">
-    <small>Macintosher.org &mdash; a non-commercial archive. Rights to ROM, software and trademarks belong to their respective owners (Apple Inc. et al.). Files are provided for preservation and personal use only. Content is removed upon request from the rights holder.</small>
+    <small>Macintosher.org - a non-commercial archive. Rights to ROM, software and trademarks belong to their respective owners (Apple Inc. et al.).</small>
   </div>
 </div>
 </body>
