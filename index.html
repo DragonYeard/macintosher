@@ -2,139 +2,71 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Macintosher.org - System Images</title>
+<title>Macintosher.org - System and ROM Archive</title>
 <style type="text/css">
   body { background-color: #cccccc; color: #000000; font-family: Geneva, Helvetica, sans-serif; font-size: 12px; margin: 0; padding: 0; text-align: center; }
-  .wrap { width: 95%; max-width: 820px; margin: 0 auto; text-align: left; }
-  h1 { font-family: Chicago, Geneva, sans-serif; font-size: 24px; text-align: center; padding: 28px 0 6px 0; margin: 0; }
-  .sub { font-size: 12px; text-align: center; margin: 0 0 20px 0; }
-  hr { border: 0; border-top: 1px solid #888888; border-bottom: 1px solid #ffffff; height: 0; margin: 16px 0; }
-  .nav { text-align: center; margin: 0 0 16px 0; }
-  .nav a { color: #000099; text-decoration: underline; }
+  .wrap { width: 95%; max-width: 650px; margin: 0 auto; text-align: left; padding-top: 30px; }
+  h1 { font-family: Chicago, Geneva, sans-serif; font-size: 26px; text-align: center; padding: 0 0 6px 0; margin: 0; }
+  .sub { font-size: 12px; text-align: center; margin: 0 0 24px 0; color: #333; }
   
-  .group { font-family: Chicago, Geneva, sans-serif; font-size: 13px; background-color: #b0b0b0; padding: 6px 8px; margin: 20px 0 0 0; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; }
-  .group-warning { background-color: #e8e8e8; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 10px; font-size: 11px; line-height: 1.5; }
+  .window { background-color: #dddddd; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 0; }
+  .title-bar { background-color: #b0b0b0; border-bottom: 1px solid #777777; padding: 6px 10px; font-family: Chicago, Geneva, sans-serif; font-size: 13px; font-weight: bold; text-align: center; }
+  .content { padding: 10px 20px; }
   
-  table.list { width: 100%; border-collapse: collapse; background-color: #dddddd; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; }
-  table.list th { font-family: Chicago, Geneva, sans-serif; font-size: 11px; text-align: left; background-color: #c0c0c0; border-bottom: 1px solid #777777; padding: 6px 8px; white-space: nowrap; }
-  table.list td { font-size: 12px; padding: 8px; border-bottom: 1px solid #bbbbbb; vertical-align: top; }
+  .file-list { width: 100%; border-collapse: collapse; }
+  .file-list td { padding: 12px 5px; border-bottom: 1px solid #bbbbbb; vertical-align: top; }
+  .file-list tr:last-child td { border-bottom: none; }
   
-  .col-download { width: 100px; text-align: right; }
-  .col-format { text-transform: uppercase; font-family: Monaco, Courier, monospace; font-size: 11px; white-space: nowrap; }
-  .col-date { white-space: nowrap; }
+  .file-title { font-family: Chicago, Geneva, sans-serif; font-weight: bold; font-size: 14px; }
+  .file-desc { font-size: 11px; color: #333333; margin-top: 4px; line-height: 1.4; }
   
-  .btn-download { font-family: Geneva, Helvetica, sans-serif; font-size: 11px; background-color: #eeeeee; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 3px 10px; cursor: pointer; color: #000000; text-decoration: none; display: inline-block; }
-  .btn-download:hover { background-color: #ffffff; }
-  .btn-download:active { border-top: 1px solid #777777; border-left: 1px solid #777777; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff; }
+  a { color: #000099; text-decoration: underline; }
+  a:hover { color: #0000cc; }
   
-  .dropdown { display: none; margin-top: 6px; background-color: #e8e8e8; border-top: 1px solid #777777; border-left: 1px solid #777777; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff; padding: 6px 8px; font-size: 11px; white-space: nowrap; }
-  .dropdown a { color: #000099; text-decoration: underline; margin-right: 10px; }
-  .dropdown a:hover { color: #0000cc; }
-  
-  .legend { font-size: 11px; color: #444444; margin-top: 20px; line-height: 1.4; }
   .footer { margin-top: 24px; padding: 14px 0 26px 0; text-align: center; }
   .footer small { font-size: 9px; color: #444444; line-height: 1.5; display: block; max-width: 640px; margin: 0 auto; }
-
-  @media (max-width: 600px) {
-    .col-date, th.col-date { display: none; }
-    .col-version { width: 50%; }
-    .col-format { width: 30%; }
-    .col-download { width: 20%; text-align: right; }
-    table.list td, table.list th { padding: 6px 4px; }
-  }
 </style>
 </head>
 <body>
+
 <div class="wrap">
   <h1>Macintosher.org</h1>
-  <p class="sub">System Software Images</p>
-  <div class="nav"><a href="index.html">Home</a> &nbsp;|&nbsp; <a href="rom.html">ROM</a></div>
-  <hr>
+  <p class="sub">Archive of System and ROM images for classic Macintosh</p>
 
-  <div class="group">Pre-release Prototypes (1983)</div>
-  
-  <div class="group-warning">
-    <b>Important:</b> These prototype builds are highly unstable and <b>will not run in a standard Mini vMac emulator</b> (except where noted). To boot them, you must use a special patched version of Mini vMac.<br><br>
-    &rarr; <a href="files/tools/Twiggy_Mini_vMac_Windows.zip" style="color:#000099; font-weight:bold;">Download Patched Mini vMac (Windows)</a>
-    <br><br>
-    <b>Notes for Sony Test 7.0:</b> Use standard Mini vMac 128K to run this. You may need to press <b>"C"</b> to continue after a non-fatal error.
+  <div class="window">
+    <div class="title-bar">Macintosher Archive</div>
+    <div class="content">
+      <table class="file-list">
+        <tr>
+          <td>
+            <div class="file-title"><a href="system.html">System Images</a></div>
+            <div class="file-desc">Official system software releases (System 1.0 through 7), as well as rare 1983 Twiggy and Sony Test prototypes.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="file-title"><a href="rom.html">ROM Images</a></div>
+            <div class="file-desc">Firmware dumps for various Macintosh models. Includes production ROMs and early prototype dumps.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="file-title"><a href="files/tools/Twiggy_Mini_vMac_Windows.zip">Mini vMac Emulator</a></div>
+            <div class="file-desc">Special patched build required to boot the 1983 Twiggy and Sony Test prototypes.</div>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 
-  <table class="list">
-    <tr>
-      <th class="col-version">Version</th>
-      <th class="col-date">Date</th>
-      <th class="col-format">Format</th>
-      <th class="col-download">Download</th>
-    </tr>
-    
-    <tr>
-      <td class="col-version">
-        <b>Twiggy System (Finder 1.7)</b><br>
-        <span style="font-size:10px;color:#555;">Requires Patched Mini vMac</span>
-      </td>
-      <td class="col-date">Aug 15, 1983</td>
-      <td class="col-format">.dc42</td>
-      <td class="col-download">
-        <a href="#" class="btn-download" onclick="toggleDropdown('dd1'); return false;">Download</a>
-        <div class="dropdown" id="dd1" style="text-align: left;">
-          <a href="files/twiggy/NewFinder-System1.7.dc42" download>.DC42</a>
-        </div>
-      </td>
-    </tr>
-    
-    <tr>
-      <td class="col-version">
-        <b>Sony Test 7.0</b><br>
-        <span style="font-size:10px;color:#555;">Runs in Standard Mini vMac 128K</span>
-      </td>
-      <td class="col-date">1983</td>
-      <td class="col-format">.image</td>
-      <td class="col-download">
-        <a href="#" class="btn-download" onclick="toggleDropdown('dd2'); return false;">Download</a>
-        <div class="dropdown" id="dd2" style="text-align: left;">
-          <a href="files/sony/SonyTest7.0.image" download>.IMAGE</a>
-        </div>
-      </td>
-    </tr>
-    
-    <tr>
-      <td class="col-version">
-        <b>Mac 16D0</b><br>
-        <span style="font-size:10px;color:#555;">Runs in Standard Mini vMac 128K</span>
-      </td>
-      <td class="col-date">1983</td>
-      <td class="col-format">.image</td>
-      <td class="col-download">
-        <a href="#" class="btn-download" onclick="toggleDropdown('dd3'); return false;">Download</a>
-        <div class="dropdown" id="dd3" style="text-align: left;">
-          <a href="files/sony/Mac16D0.image" download>.IMAGE</a>
-        </div>
-      </td>
-    </tr>
-  </table>
-
-  <p class="legend">
-    <b>Format notes:</b><br>
-    <b>.DC42</b> &mdash; DiskCopy 4.2 image, ready for Mini vMac emulator.<br>
-    <b>.IMAGE</b> &mdash; Raw disk image, works in emulators and can be written to physical disks.
-  </p>
-
-  <hr>
   <div class="footer">
-    <small>Macintosher.org &mdash; a non-commercial archive. Rights to ROM, software and trademarks belong to their respective owners (Apple Inc. et al.). Files are provided for preservation and personal use only. Content is removed upon request from the rights holder.</small>
+    <small>
+      Macintosher.org &mdash; a non-commercial archive. Rights to ROM, software and trademarks
+      belong to their respective owners (Apple Inc. et al.). Files are provided for preservation
+      and personal use only. Content is removed upon request from the rights holder.
+    </small>
   </div>
 </div>
 
-<script type="text/javascript">
-function toggleDropdown(id) {
-  var all = document.getElementsByTagName("div");
-  for (var i = 0; i < all.length; i++) {
-    if (all[i].className === "dropdown" && all[i].id !== id) { all[i].style.display = "none"; }
-  }
-  var el = document.getElementById(id);
-  if (el) { el.style.display = (el.style.display === "block") ? "none" : "block"; }
-}
-</script>
 </body>
 </html>
