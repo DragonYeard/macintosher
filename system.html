@@ -15,33 +15,33 @@
   .group { font-family: Chicago, Geneva, sans-serif; font-size: 13px; background-color: #b0b0b0; padding: 6px 8px; margin: 20px 0 0 0; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; }
   .group-warning { background-color: #e8e8e8; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 10px; font-size: 11px; line-height: 1.5; }
   
-  table.list { width: 100%; border-collapse: collapse; background-color: #dddddd; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; }
+  table.list { width: 100%; border-collapse: collapse; table-layout: fixed; background-color: #dddddd; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; }
   table.list th { font-family: Chicago, Geneva, sans-serif; font-size: 11px; text-align: left; background-color: #c0c0c0; border-bottom: 1px solid #777777; padding: 6px 8px; white-space: nowrap; }
   table.list td { font-size: 12px; padding: 8px; border-bottom: 1px solid #bbbbbb; vertical-align: top; }
   
-  .col-download { width: 100px; text-align: right; }
-  .col-format { text-transform: uppercase; font-family: Monaco, Courier, monospace; font-size: 11px; white-space: nowrap; }
-  .col-date { white-space: nowrap; }
-  .col-lang { white-space: nowrap; }
+  .col-version { width: 45%; }
+  .col-date { width: 15%; white-space: nowrap; }
+  .col-lang { width: 15%; white-space: nowrap; }
+  .col-download { width: 25%; text-align: right; }
   
-  .btn-download { font-family: Geneva, Helvetica, sans-serif; font-size: 11px; background-color: #eeeeee; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 3px 10px; cursor: pointer; color: #000000; text-decoration: none; display: inline-block; }
+  .btn-download { font-family: Geneva, Helvetica, sans-serif; font-size: 11px; background-color: #eeeeee; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 3px 10px; cursor: pointer; color: #000000; text-decoration: none; display: inline-block; margin: 2px 0; }
   .btn-download:hover { background-color: #ffffff; }
   .btn-download:active { border-top: 1px solid #777777; border-left: 1px solid #777777; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff; }
   
   .dropdown { display: none; margin-top: 6px; background-color: #e8e8e8; border-top: 1px solid #777777; border-left: 1px solid #777777; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff; padding: 6px 8px; font-size: 11px; white-space: nowrap; }
-  .dropdown a { color: #000099; text-decoration: underline; margin-right: 10px; }
+  .dropdown a { color: #000099; text-decoration: underline; display: block; margin-bottom: 4px; }
   .dropdown a:hover { color: #0000cc; }
+  
+  .hash { font-family: Monaco, Courier, monospace; font-size: 10px; color: #666; display: block; margin-top: 2px; word-wrap: break-word; }
   
   .legend { font-size: 11px; color: #444444; margin-top: 20px; line-height: 1.4; }
   .footer { margin-top: 24px; padding: 14px 0 26px 0; text-align: center; }
   .footer small { font-size: 9px; color: #444444; line-height: 1.5; display: block; max-width: 640px; margin: 0 auto; }
 
   @media (max-width: 600px) {
-    /* Скрываем колонки "Date" и "Language" на телефонах, чтобы не ломалось */
     .col-date, th.col-date, .col-lang, th.col-lang { display: none; }
-    .col-version { width: 50%; }
-    .col-format { width: 30%; }
-    .col-download { width: 20%; text-align: right; }
+    .col-version { width: 60%; }
+    .col-download { width: 40%; text-align: right; }
     table.list td, table.list th { padding: 6px 4px; }
   }
 </style>
@@ -53,77 +53,332 @@
   <div class="nav"><a href="index.html">Home</a> | <a href="system.html">System</a> | <a href="rom.html">ROM</a> | <a href="credits.html">Credits</a></div>
   <hr>
 
+  <!-- ПРОТОТИПЫ -->
   <div class="group">Pre-release Prototypes (1983)</div>
-  
   <div class="group-warning">
     <b>Important:</b> These prototype builds are highly unstable and <b>will not run in a standard Mini vMac emulator</b> (except where noted). To boot them, you must use a special patched version of Mini vMac.<br><br>
     &rarr; <a href="files/tools/Twiggy_Mini_vMac_Windows.zip" style="color:#000099; font-weight:bold;">Download Patched Mini vMac (Windows)</a>
     <br><br>
     <b>Notes for Sony Test 7.0:</b> Use standard Mini vMac 128K to run this. You may need to press <b>"C"</b> to continue after a non-fatal error.
   </div>
-
   <table class="list">
+    <tr><th class="col-version">Version</th><th class="col-date">Date</th><th class="col-lang">Language</th><th class="col-download">Download</th></tr>
     <tr>
-      <th class="col-version">Version</th>
-      <th class="col-date">Date</th>
-      <th class="col-lang">Language</th>
-      <th class="col-format">Format</th>
-      <th class="col-download">Download</th>
-    </tr>
-    
-    <tr>
-      <td class="col-version">
-        <b>Twiggy System (Finder 1.7)</b><br>
-        <span style="font-size:10px;color:#555;">Requires Patched Mini vMac</span>
-      </td>
+      <td class="col-version"><b>Twiggy System (Finder 1.7)</b><br><span style="font-size:10px;color:#555;">Requires Patched Mini vMac</span></td>
       <td class="col-date">Aug 15, 1983</td>
       <td class="col-lang">English</td>
-      <td class="col-format">.dc42</td>
-      <td class="col-download">
-        <a href="#" class="btn-download" onclick="toggleDropdown('dd1'); return false;">Download</a>
-        <div class="dropdown" id="dd1" style="text-align: left;">
-          <a href="files/twiggy/NewFinder-System1.7.dc42" download>.DC42</a>
-        </div>
+      <td class="col-download"><a href="#" class="btn-download" onclick="toggleDropdown('dd1'); return false;">Download</a>
+        <div class="dropdown" id="dd1" style="text-align: left;"><a href="files/twiggy/NewFinder-System1.7.dc42" download>.DC42</a></div>
       </td>
     </tr>
+    <tr>
+      <td class="col-version"><b>Sony Test 7.0</b><br><span style="font-size:10px;color:#555;">Runs in Standard Mini vMac 128K</span></td>
+      <td class="col-date">1983</td>
+      <td class="col-lang">English</td>
+      <td class="col-download"><a href="#" class="btn-download" onclick="toggleDropdown('dd2'); return false;">Download</a>
+        <div class="dropdown" id="dd2" style="text-align: left;"><a href="files/sony/SonyTest7.0.image" download>.IMAGE</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col-version"><b>Mac 16D0</b><br><span style="font-size:10px;color:#555;">Runs in Standard Mini vMac 128K</span></td>
+      <td class="col-date">1983</td>
+      <td class="col-lang">English</td>
+      <td class="col-download"><a href="#" class="btn-download" onclick="toggleDropdown('dd3'); return false;">Download</a>
+        <div class="dropdown" id="dd3" style="text-align: left;"><a href="files/sony/Mac16D0.image" download>.IMAGE</a></div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- SYSTEM 1 -->
+  <div class="group">System 1 (1984)</div>
+  <div class="group-warning" style="border-bottom: none; margin-bottom: 0;">
+    <b>About System 1.0:</b> The original 1984 release, dumped from an original, mostly untouched disk. It was a single-tasking OS for the Motorola 68K CPU, bundled with MacWrite, MacPaint, and a Guided Tour. The 400k image has been tested and works in standard emulators.
+  </div>
+  <table class="list">
+    <tr><th class="col-version">Version</th><th class="col-date">Date</th><th class="col-lang">Language</th><th class="col-download">Download</th></tr>
     
     <tr>
       <td class="col-version">
-        <b>Sony Test 7.0</b><br>
-        <span style="font-size:10px;color:#555;">Runs in Standard Mini vMac 128K</span>
+        <b>System 1.0 (Finder 1.0)</b><br>
+        <span class="hash">CRC32: 2E2FCBB8</span>
       </td>
-      <td class="col-date">1983</td>
+      <td class="col-date">Jan 1984</td>
       <td class="col-lang">English</td>
-      <td class="col-format">.image</td>
       <td class="col-download">
-        <a href="#" class="btn-download" onclick="toggleDropdown('dd2'); return false;">Download</a>
-        <div class="dropdown" id="dd2" style="text-align: left;">
-          <a href="files/sony/SonyTest7.0.image" download>.IMAGE</a>
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd4'); return false;">Download</a>
+        <div class="dropdown" id="dd4" style="text-align: left;">
+          <a href="files/system/System_1.0.img" download>.IMG</a>
+          <a href="files/system/System_1.0.dc42" download>.DC42</a>
         </div>
       </td>
     </tr>
+
+    <tr>
+      <td class="col-version">
+        <b>System 1.1 (Finder 1.1g)</b><br>
+        <span class="hash">CRC32: DE404BBA</span>
+      </td>
+      <td class="col-date">Apr 1984</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd5'); return false;">Download</a>
+        <div class="dropdown" id="dd5" style="text-align: left;">
+          <a href="files/system/System_1.1.img" download>.IMG</a>
+          <a href="files/system/System_1.1.sit.bin" download>.SIT.BIN (Archive)</a>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- SYSTEM 2 -->
+  <div class="group">System 2 (1985)</div>
+  <div class="group-warning" style="border-bottom: none; margin-bottom: 0;">
+    <b>About System 2.x:</b> Released in 1985. This version introduced the Hierarchical File System (HFS) for hard drives and 800k floppy disks. System 2.1 was bundled with the first Apple Hard Disk 20.
+  </div>
+  <table class="list">
+    <tr><th class="col-version">Version</th><th class="col-date">Date</th><th class="col-lang">Language</th><th class="col-download">Download</th></tr>
     
     <tr>
       <td class="col-version">
-        <b>Mac 16D0</b><br>
-        <span style="font-size:10px;color:#555;">Runs in Standard Mini vMac 128K</span>
+        <b>System 2.0 (Finder 4.1)</b><br>
+        <span class="hash">CRC32: 2A4FE149</span>
       </td>
-      <td class="col-date">1983</td>
+      <td class="col-date">Apr 1985</td>
       <td class="col-lang">English</td>
-      <td class="col-format">.image</td>
       <td class="col-download">
-        <a href="#" class="btn-download" onclick="toggleDropdown('dd3'); return false;">Download</a>
-        <div class="dropdown" id="dd3" style="text-align: left;">
-          <a href="files/sony/Mac16D0.image" download>.IMAGE</a>
+        <a href="files/system/System_2.0.img" class="btn-download" download>Download</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-version">
+        <b>System 2.1 (Finder 5.0)</b><br>
+        <span class="hash">CRC32: 238414E2</span>
+      </td>
+      <td class="col-date">Sep 1985</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="files/system/System_2.1.img" class="btn-download" download>Download</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- SYSTEM 3 -->
+  <div class="group">System 3 (1986)</div>
+  <div class="group-warning" style="border-bottom: none; margin-bottom: 0;">
+    <b>About System 3.x:</b> Introduced with the Macintosh Plus. This version officially added the Hierarchical File System (HFS), 800K startup drives, SCSI support, and AppleShare.
+  </div>
+  <table class="list">
+    <tr><th class="col-version">Version</th><th class="col-date">Date</th><th class="col-lang">Language</th><th class="col-download">Download</th></tr>
+    <tr>
+      <td class="col-version">
+        <b>System 3.0 (Finder 5.1)</b><br>
+        <span class="hash">CRC32: D3768BCB</span>
+      </td>
+      <td class="col-date">Jan 1986</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="files/system/System_3.0.img" class="btn-download" download>Download</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- SYSTEM 4 -->
+  <div class="group">System 4 (1987)</div>
+  <div class="group-warning" style="border-bottom: none; margin-bottom: 0;">
+    <b>About System 4.x:</b> System 4.0 dropped support for the Mac 128K, added Mac SE support, revised the Chooser and Control Panel, and introduced the "bulging" Trash effect. System 4.1 dropped the Mac 512K, added Mac II support, and supported hard drives over 32MB.
+  </div>
+  <table class="list">
+    <tr><th class="col-version">Version</th><th class="col-date">Date</th><th class="col-lang">Language</th><th class="col-download">Download</th></tr>
+    
+    <tr>
+      <td class="col-version">
+        <b>System 4.0 (Finder 5.4)</b><br>
+        <span class="hash">CRC32: 2BFA7A75</span>
+      </td>
+      <td class="col-date">Jan 1987</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="files/system/Utilities_4.0.img" class="btn-download" download>Download Utilities</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-version">
+        <b>System 4.1 (Finder 5.5)</b><br>
+        <span class="hash">CRC32: E1C0AF0D</span>
+      </td>
+      <td class="col-date">Apr 1987</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd6'); return false;">Download</a>
+        <div class="dropdown" id="dd6" style="text-align: left;">
+          <a href="files/system/System_4.1.img" download>.IMG (System Tools)</a>
+          <a href="files/system/Utilities_4.1.img" download>.IMG (Utilities)</a>
         </div>
       </td>
+    </tr>
+  </table>
+
+  <!-- SYSTEM 5 -->
+  <div class="group">System Software 5 (1987)</div>
+  <div class="group-warning" style="border-bottom: none; margin-bottom: 0;">
+    <b>About System 5.x (System 4.2/4.3):</b> Starting with this release, Apple unified all software under one version numbering system ("System Software 5.0"), though the core System file remained at version 4.2. This release introduced <b>MultiFinder</b> (multitasking and application switching) and added more color support.
+  </div>
+  <table class="list">
+    <tr><th class="col-version">Version</th><th class="col-date">Date</th><th class="col-lang">Language</th><th class="col-download">Download</th></tr>
+    
+    <tr>
+      <td class="col-version">
+        <b>System Software 5.0</b><br>
+        <span style="font-size:10px;color:#555;">System 4.2 / Finder 6.0</span><br>
+        <span class="hash">CRC32: 43A3581</span>
+      </td>
+      <td class="col-date">Oct 1987</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd7'); return false;">Download</a>
+        <div class="dropdown" id="dd7" style="text-align: left;">
+          <a href="files/system/System_5.0_Tools1.img" download>.IMG (Tools 1)</a>
+          <a href="files/system/System_5.0_Tools2.img" download>.IMG (Tools 2)</a>
+          <a href="files/system/System_5.0_Utils1.img" download>.IMG (Utilities 1)</a>
+          <a href="files/system/System_5.0_Utils2.img" download>.IMG (Utilities 2)</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-version">
+        <b>System Software 5.1</b><br>
+        <span style="font-size:10px;color:#555;">System 4.3 / Finder 6.0</span><br>
+        <span class="hash">CRC32: BADBF8A5</span>
+      </td>
+      <td class="col-date">Nov 1987</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd8'); return false;">Download</a>
+        <div class="dropdown" id="dd8" style="text-align: left;">
+          <a href="files/system/System_5.1_Tools1.img" download>.IMG (Tools 1)</a>
+          <a href="files/system/System_5.1_Tools2.img" download>.IMG (Tools 2)</a>
+          <a href="files/system/System_5.1_Utils1.img" download>.IMG (Utilities 1)</a>
+          <a href="files/system/System_5.1_Utils2.img" download>.IMG (Utilities 2)</a>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- SYSTEM 6 -->
+  <div class="group">System 6 (1988)</div>
+  <div class="group-warning" style="border-bottom: none; margin-bottom: 0;">
+    <b>About System 6:</b> System 6 finally brought version numbers mostly in sync. It added improvements to MultiFinder and LaserWriter drivers, and support for the 800k/1.44mb SuperDrive. System 6.0.3 is considered the first stable version. System 6.0.8 was the final and most popular release for classic Macs.<br><br>
+    <b>Warning:</b> System 6.0.6 was not officially released due to a bug. It is included here for historical preservation.
+  </div>
+  <table class="list">
+    <tr><th class="col-version">Version</th><th class="col-date">Date</th><th class="col-lang">Language</th><th class="col-download">Download</th></tr>
+    
+    <tr>
+      <td class="col-version"><b>System 6.0</b><br><span style="font-size:10px;color:#555;">Initial Release</span><br><span class="hash">CRC32: B93A68D5</span></td>
+      <td class="col-date">1988</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd9'); return false;">Download</a>
+        <div class="dropdown" id="dd9" style="text-align: left;">
+          <a href="files/system/System_6.0_Tools.img" download><b>.IMG (Tools)</b></a>
+          <a href="files/system/System_6.0_Utils1.img" download>.IMG (Utilities 1)</a>
+          <a href="files/system/System_6.0_Utils2.img" download>.IMG (Utilities 2)</a>
+          <a href="files/system/System_6.0_Printing.img" download>.IMG (Printing Tools)</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-version"><b>System 6.0.2</b><br><span class="hash">CRC32: 66039D75</span></td>
+      <td class="col-date">1988</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd10'); return false;">Download</a>
+        <div class="dropdown" id="dd10" style="text-align: left;">
+          <a href="files/system/System_6.0.2_Tools.img" download><b>.IMG (Tools)</b></a>
+          <a href="files/system/System_6.0.2_Utils1.img" download>.IMG (Utilities 1)</a>
+          <a href="files/system/System_6.0.2_Utils2.img" download>.IMG (Utilities 2)</a>
+          <a href="files/system/System_6.0.2_Printing.img" download>.IMG (Printing Tools)</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-version"><b>System 6.0.3</b><br><span style="font-size:10px;color:#555;">First stable release</span><br><span class="hash">CRC32: 9DB96333</span></td>
+      <td class="col-date">1988</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd11'); return false;">Download</a>
+        <div class="dropdown" id="dd11" style="text-align: left;">
+          <a href="files/system/System_6.0.3_Tools.img" download><b>.IMG (Tools)</b></a>
+          <a href="files/system/System_6.0.3_Utils1.img" download>.IMG (Utilities 1)</a>
+          <a href="files/system/System_6.0.3_Utils2.img" download>.IMG (Utilities 2)</a>
+          <a href="files/system/System_6.0.3_Printing.img" download>.IMG (Printing Tools)</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-version"><b>System 6.0.4</b><br><span class="hash">CRC32: 5E7501DF</span></td>
+      <td class="col-date">1989</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd12'); return false;">Download</a>
+        <div class="dropdown" id="dd12" style="text-align: left;">
+          <a href="files/system/System_6.0.4_Tools.img" download><b>.IMG (Tools)</b></a>
+          <a href="files/system/System_6.0.4_Utils1.img" download>.IMG (Utilities 1)</a>
+          <a href="files/system/System_6.0.4_Utils2.img" download>.IMG (Utilities 2)</a>
+          <a href="files/system/System_6.0.4_Printing.img" download>.IMG (Printing Tools)</a>
+          <a href="files/system/System_6.0.4_Network.img" download>.IMG (Network)</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-version"><b>System 6.0.5</b><br><span class="hash">CRC32: 988DF224</span></td>
+      <td class="col-date">1989</td>
+      <td class="col-lang">English</td>
+      <td class="col-download">
+        <a href="#" class="btn-download" onclick="toggleDropdown('dd13'); return false;">Download</a>
+        <div class="dropdown" id="dd13" style="text-align: left;">
+          <a href="files/system/System_6.0.5_Tools.img" download><b>.IMG (Tools)</b></a>
+          <a href="files/system/System_6.0.5_Utils1.img" download>.IMG (Utilities 1)</a>
+          <a href="files/system/System_6.0.5_Utils2.img" download>.IMG (Utilities 2)</a>
+          <a href="files/system/System_6.0.5_Printing.img" download>.IMG (Printing Tools)</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-version"><b>System 6.0.6</b><br><span style="font-size:10px;color:#cc0000;">Unofficial (Bug)</span></td>
+      <td class="col-date">1990</td>
+      <td class="col-lang">English</td>
+      <td class="col-download"><a href="files/system/System_6.0.6.img" class="btn-download" download>Download</a></td>
+    </tr>
+
+    <tr>
+      <td class="col-version"><b>System 6.0.7</b></td>
+      <td class="col-date">1990</td>
+      <td class="col-lang">English</td>
+      <td class="col-download"><a href="files/system/System_6.0.7.img" class="btn-download" download>Download</a></td>
+    </tr>
+
+    <tr>
+      <td class="col-version"><b>System 6.0.8</b><br><span style="font-size:10px;color:#555;">Final popular release</span></td>
+      <td class="col-date">1991</td>
+      <td class="col-lang">English</td>
+      <td class="col-download"><a href="files/system/System_6.0.8.img" class="btn-download" download>Download</a></td>
     </tr>
   </table>
 
   <p class="legend">
     <b>Format notes:</b><br>
     <b>.DC42</b> &mdash; DiskCopy 4.2 image, ready for Mini vMac emulator.<br>
-    <b>.IMAGE</b> &mdash; Raw disk image, works in emulators and can be written to physical disks.
+    <b>.IMAGE / .IMG</b> &mdash; Raw disk image, works in emulators and can be written to physical disks.<br>
+    <b>.SIT.BIN</b> &mdash; Original StuffIt archive (requires StuffIt Expander).
   </p>
 
   <hr>
