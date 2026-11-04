@@ -13,30 +13,34 @@
   .nav a { color: #000099; text-decoration: underline; margin: 0 5px; }
   
   .group { font-family: Chicago, Geneva, sans-serif; font-size: 13px; background-color: #b0b0b0; padding: 6px 8px; margin: 20px 0 0 0; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; }
-  
   .group-warning { background-color: #e8e8e8; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 12px; font-size: 11px; line-height: 1.5; }
   
-  table.list { width: 100%; border-collapse: collapse; background-color: #dddddd; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; }
+  /* Фиксируем таблицу, чтобы длинный хеш не ломал верстку */
+  table.list { width: 100%; border-collapse: collapse; table-layout: fixed; background-color: #dddddd; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; }
   table.list th { font-family: Chicago, Geneva, sans-serif; font-size: 11px; text-align: left; background-color: #c0c0c0; border-bottom: 1px solid #777777; padding: 6px 8px; white-space: nowrap; }
   table.list td { font-size: 12px; padding: 8px; border-bottom: 1px solid #bbbbbb; vertical-align: top; }
   
-  .col-download { width: 100px; text-align: right; }
-  .col-date { white-space: nowrap; }
+  /* Задаем ширину колонок в процентах */
+  .col-version { width: 65%; }
+  .col-date { width: 15%; white-space: nowrap; }
+  .col-download { width: 20%; text-align: right; }
   
   .btn-download { font-family: Geneva, Helvetica, sans-serif; font-size: 11px; background-color: #eeeeee; border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #777777; border-bottom: 1px solid #777777; padding: 3px 10px; cursor: pointer; color: #000000; text-decoration: none; display: inline-block; }
   .btn-download:hover { background-color: #ffffff; }
   .btn-download:active { border-top: 1px solid #777777; border-left: 1px solid #777777; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff; }
   
-  .hash { font-family: Monaco, Courier, monospace; font-size: 10px; color: #666; display: block; margin-top: 2px; }
+  /* Хеш теперь переносится на новую строку, если не влезает */
+  .hash { font-family: Monaco, Courier, monospace; font-size: 10px; color: #666; display: block; margin-top: 2px; word-wrap: break-word; white-space: normal; }
   
   .legend { font-size: 11px; color: #444444; margin-top: 20px; line-height: 1.4; }
   .footer { margin-top: 24px; padding: 14px 0 26px 0; text-align: center; }
   .footer small { font-size: 9px; color: #444444; line-height: 1.5; display: block; max-width: 640px; margin: 0 auto; }
 
+  /* Адаптивность для телефонов */
   @media (max-width: 600px) {
     .col-date, th.col-date { display: none; }
-    .col-version { width: 70%; }
-    .col-download { width: 30%; text-align: right; }
+    .col-version { width: 75%; }
+    .col-download { width: 25%; text-align: right; }
     table.list td, table.list th { padding: 6px 4px; }
   }
 </style>
@@ -61,12 +65,18 @@
   <table class="list">
     <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
     <tr>
-      <td class="col-version"><b>Twiggy Mac ROM</b></td>
+      <td class="col-version">
+        <b>Twiggy Mac ROM</b><br>
+        <span class="hash">SHA-1: baec65c951676f8a1656fe7558a403191412e59a</span>
+      </td>
       <td class="col-date">1983</td>
       <td class="col-download"><a href="files/rom/Twiggy.ROM" class="btn-download" download>Download</a></td>
     </tr>
     <tr>
-      <td class="col-version"><b>Mac 128K Prototype (Split BIN)</b></td>
+      <td class="col-version">
+        <b>Mac 128K Prototype (Split BIN)</b><br>
+        <span class="hash">4 parts in ZIP (HIGH/LOW)</span>
+      </td>
       <td class="col-date">1983</td>
       <td class="col-download"><a href="files/rom/Mac128K_Prototype_BIN.zip" class="btn-download" download>Download</a></td>
     </tr>
@@ -77,22 +87,34 @@
   <table class="list">
     <tr><th class="col-version">Model</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
     <tr>
-      <td class="col-version"><b>Mac Plus v4 (Japanese)</b><span class="hash">Kanji ROM (2025 dump)</span></td>
+      <td class="col-version">
+        <b>Mac Plus v4 (Japanese)</b><br>
+        <span class="hash">Kanji ROM (2025 dump)</span>
+      </td>
       <td class="col-date">1986</td>
       <td class="col-download"><a href="files/rom/MacPlusROMv4.zip" class="btn-download" download>Download</a></td>
     </tr>
     <tr>
-      <td class="col-version"><b>Apple Pippin</b><span class="hash">Game console ROM set</span></td>
+      <td class="col-version">
+        <b>Apple Pippin</b><br>
+        <span class="hash">ROM set (4 files in ZIP)</span>
+      </td>
       <td class="col-date">1995</td>
       <td class="col-download"><a href="files/rom/pippin.zip" class="btn-download" download>Download</a></td>
     </tr>
     <tr>
-      <td class="col-version"><b>PowerMac 4400</b></td>
+      <td class="col-version">
+        <b>PowerMac 4400</b><br>
+        <span class="hash">ROM dump in ZIP</span>
+      </td>
       <td class="col-date">1997</td>
       <td class="col-download"><a href="files/rom/4400.zip" class="btn-download" download>Download</a></td>
     </tr>
     <tr>
-      <td class="col-version"><b>PowerMac 5500</b></td>
+      <td class="col-version">
+        <b>PowerMac 5500</b><br>
+        <span class="hash">ROM dump in ZIP</span>
+      </td>
       <td class="col-date">1997</td>
       <td class="col-download"><a href="files/rom/5500.zip" class="btn-download" download>Download</a></td>
     </tr>
@@ -420,111 +442,11 @@
     </tr>
   </table>
 
-  <!-- NEW WORLD ROMS -->
-  <div class="group">New World ROMs (1998-2003)</div>
-  <table class="list">
-    <tr><th class="col-version">ROM Version</th><th class="col-date">Date</th><th class="col-download">Download</th></tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 1.1</b></td>
-      <td class="col-date">Jul 1998</td>
-      <td class="col-download"><a href="files/rom/MacOS_1.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 1.1.2</b></td>
-      <td class="col-date">Aug 1998</td>
-      <td class="col-download"><a href="files/rom/MacOS_1.1.2.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 1.2</b></td>
-      <td class="col-date">Dec 1998</td>
-      <td class="col-download"><a href="files/rom/MacOS_1.2.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 1.2.1</b></td>
-      <td class="col-date">Jan 1999</td>
-      <td class="col-download"><a href="files/rom/MacOS_1.2.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 1.4</b></td>
-      <td class="col-date">Apr 1999</td>
-      <td class="col-download"><a href="files/rom/MacOS_1.4.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 1.6</b></td>
-      <td class="col-date">May 1999</td>
-      <td class="col-download"><a href="files/rom/MacOS_1.6.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 2.5.1</b></td>
-      <td class="col-date">Sep 1999</td>
-      <td class="col-download"><a href="files/rom/MacOS_2.5.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 3.0</b></td>
-      <td class="col-date">Sep 1999</td>
-      <td class="col-download"><a href="files/rom/MacOS_3.0.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 1.8.1</b></td>
-      <td class="col-date">Sep 1999</td>
-      <td class="col-download"><a href="files/rom/MacOS_1.8.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 3.7</b></td>
-      <td class="col-date">Mar 2000</td>
-      <td class="col-download"><a href="files/rom/MacOS_3.7.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 3.8</b></td>
-      <td class="col-date">May 2000</td>
-      <td class="col-download"><a href="files/rom/MacOS_3.8.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 6.1</b></td>
-      <td class="col-date">Nov 2000</td>
-      <td class="col-download"><a href="files/rom/MacOS_6.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 7.5.1</b></td>
-      <td class="col-date">Feb 2001</td>
-      <td class="col-download"><a href="files/rom/MacOS_7.5.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 8.4</b></td>
-      <td class="col-date">Jul 2001</td>
-      <td class="col-download"><a href="files/rom/MacOS_8.4.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 9.0.1</b></td>
-      <td class="col-date">Dec 2001</td>
-      <td class="col-download"><a href="files/rom/MacOS_9.0.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 9.1.1</b></td>
-      <td class="col-date">Apr 2002</td>
-      <td class="col-download"><a href="files/rom/MacOS_9.1.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 9.6.1</b></td>
-      <td class="col-date">Sep 2002</td>
-      <td class="col-download"><a href="files/rom/MacOS_9.6.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 9.8.1</b></td>
-      <td class="col-date">Jan 2003</td>
-      <td class="col-download"><a href="files/rom/MacOS_9.8.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-    <tr>
-      <td class="col-version"><b>Mac OS ROM 10.2.1</b></td>
-      <td class="col-date">Apr 2003</td>
-      <td class="col-download"><a href="files/rom/MacOS_10.2.1.rom" class="btn-download" download>Download</a></td>
-    </tr>
-  </table>
-
+  <!-- Легенда -->
   <p class="legend">
     <b>Format notes:</b><br>
     <b>.ROM / .BIN</b> - Firmware dumps for Macintosh emulators (Mini vMac, Basilisk II, QEMU, etc.).<br>
-    <b>CRC32</b> - Check the integrity of your downloaded ROM using this checksum.
+    <b>CRC32 / SHA-1</b> - Checksums for file integrity verification.
   </p>
 
   <hr>
